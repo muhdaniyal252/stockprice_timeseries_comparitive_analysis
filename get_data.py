@@ -6,7 +6,7 @@ import time
 from itertools import product
 
 url = 'https://dps.psx.com.pk/historical'
-code = 'KEL'
+code = 'BAHL'
 months = [str(i) for i in range(1,13)]
 years = ['2020','2021','2022']
 
@@ -36,7 +36,7 @@ for year,month in product(years,months):
     for idx in range(idx1 + len(sub1) + 1, idx2):
         res = res + test_str[idx]
     print(res)
-    with open(f'{code}.csv','a') as f:
+    with open(f'stockdata/{code}.csv','a') as f:
         f.write(res)
 
 driver.quit()
